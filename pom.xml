@@ -11,17 +11,13 @@
 	<properties>
 		<build.file.encoding>UTF-8</build.file.encoding>
 		<commons-lang.version>2.6</commons-lang.version>
-		<disruptor.version>3.3.2</disruptor.version>
 		<slf4j.version>1.6.4</slf4j.version>
 		<log4j.version>1.2.16</log4j.version>
+		<disruptor.version>3.3.2</disruptor.version>
+		<zookeeper.version>3.4.4</zookeeper.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
-			<dependency>
-				<groupId>com.lmax</groupId>
-				<artifactId>disruptor</artifactId>
-				<version>${disruptor.version}</version>
-			</dependency>
 			<dependency>
 				<groupId>commons-lang</groupId>
 				<artifactId>commons-lang</artifactId>
@@ -41,6 +37,16 @@
 				<groupId>log4j</groupId>
 				<artifactId>log4j</artifactId>
 				<version>${log4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.lmax</groupId>
+				<artifactId>disruptor</artifactId>
+				<version>${disruptor.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.zookeeper</groupId>
+				<artifactId>zookeeper</artifactId>
+				<version>${zookeeper.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
@@ -128,5 +134,6 @@
 	</build>
 	<modules>
 		<module>test-projects-disruptor</module>
+		<module>test-projects-zookeeper</module>
 	</modules>
 </project>
